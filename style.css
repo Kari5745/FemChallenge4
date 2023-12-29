@@ -1,0 +1,110 @@
+:root{
+    /*Colors*/
+    --Bright-orange: hsl(31, 77%, 52%);
+    --Dark-cyan: hsl(184, 100%, 22%);
+    --Very-dark-cyan: hsl(179, 100%, 13%);
+
+    --Transparent-white: hsla(0, 0%, 100%, 0.75); /*paragraphs*/
+    --Very-light-gray: hsl(0, 0%, 95%); /*(background, headings, buttons)*/
+
+    /*Font weight*/
+    --ld-400:400;
+    --bds-700:700;
+}
+/**/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Big Shoulders Display', sans-serif;
+    font-family: 'Lexend Deca', sans-serif;
+    background-color: var(--Very-light-gray);
+    font-size: 15px;
+}
+section{
+    width: 80%;
+    margin: 10% auto;
+}
+div{
+    padding: 50px;
+    line-height: 1.6;
+}
+
+.sedan{
+    background-color: var(--Bright-orange);
+    border-radius: 10px 10px 0 0;
+}
+
+.suv{
+    background-color: var(--Dark-cyan);
+}
+
+.luxury{
+    background-color: var(--Very-dark-cyan);
+    border-radius: 0 0 10px 10px;
+}
+
+h1{
+    font-family: 'Big Shoulders Display', sans-serif;
+    font-weight: var(--bds-700);
+    font-size: 35px;
+    color: var(--Very-light-gray);
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+P{
+    font-family: 'Lexend Deca', sans-serif;
+    font-weight: var(--ld-400);
+    color: var(--Transparent-white);
+    margin-bottom: 20px;
+    max-width: 200px;
+}
+
+button{
+    background-color: var(--Very-light-gray);
+    border-radius: 50px;
+    width: 100px;
+    padding: 10px;
+    font-weight: var(--bds-700);
+    cursor: pointer;
+    transition: all 0.4ms ease;
+}
+
+.sedan .btn{
+    color: var(--Bright-orange);
+}
+
+.suv .btn{
+    color: var(--Dark-cyan);
+}
+
+.luxury .btn{
+    color: var(--Very-dark-cyan);
+}
+
+.btn:hover{
+    border-color: var(--Transparent-white);
+    color: var(--Very-light-gray);
+    background-color: transparent;
+}
+
+@media only screen and (min-width: 1050px){
+    section{
+        display: flex;
+        justify-content: center;
+    }
+
+    .sedan{
+        border-radius: 10px 0 0 10px;
+    }
+    
+    .luxury{
+        border-radius: 0 10px 10px 0;
+    }
+
+}
